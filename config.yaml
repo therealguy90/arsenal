@@ -1,0 +1,4 @@
+development:
+  bot_token: "YOUR_BOT_TOKEN_HERE"
+production:
+  bot_token: "YOUR_BOT_TOKEN_HERE"

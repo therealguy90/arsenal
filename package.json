@@ -1,0 +1,15 @@
+{
+  "name": "arsenal",
+  "version": "0.0.1",
+  "description": "A simple Discord bot using Node.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "puppeteer": "^22.6.1",
+    "js-yaml": "^4.1.0",
+    "sqlite3": "^5.1.7"
+  },
+  "author": "Loki123"
+}
