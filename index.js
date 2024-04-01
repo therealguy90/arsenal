@@ -13,7 +13,7 @@ try {
     console.error('Error loading config:', e);
 }
 
-if (bot_token && dburl) {
+if (bot_token) {
 
     const db = new sqlite3.Database('./databases/users.db');
     db.get("SELECT name FROM sqlite_master WHERE type='table' AND name='users'", (err, row) => {
@@ -36,11 +36,11 @@ if (bot_token && dburl) {
         }
     });
     const pageMap = new Map();
-    let browser; 
-    puppeteer.launch({ headless: true, devtools: true, args: ['--window-size=1024,700', '--no-sandbox'] })
-    .then(puppeteerBrowser => {
-        browser = puppeteerBrowser;
-    })
+    let browser;
+    puppeteer.launch({ headless: true, devtools: true, args: ['--window-size=1024,700'] })
+        .then(puppeteerBrowser => {
+            browser = puppeteerBrowser;
+        })
     const { loginCommand, logoutCommand } = require('./slashcommands/auth.js');
     const { registerAuthCommands } = require('./slashcommands/auth.js');
     const { setActor, setActorByName, unsetActor } = require('./slashcommands/actor.js');
